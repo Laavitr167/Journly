@@ -73,13 +73,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Built With
 
-Built entirely with [Claude Code](https://www.anthropic.com/claude-code).
+Built with [Claude Code](https://www.anthropic.com/claude-code).
 
 ## Author
 
 **Laavitr Sahgal**
 GitHub: [@Laavitr167](https://github.com/Laavitr167) · X: [@Lavi1212216](https://x.com/Lavi1212216)
 
-## License
-
-MIT
