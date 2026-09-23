@@ -1,0 +1,340 @@
+{
+  "kusrcpi": {
+    "destination": "Tokyo",
+    "days": [
+      {
+        "day": 1,
+        "theme": "Modern Tech and Pop Culture",
+        "activities": [
+          {
+            "time": "9:00 AM",
+            "title": "Explore Akihabara Electric Town",
+            "description": "Discover anime, gaming, and electronics shops in this bustling tech district.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "1:00 PM",
+            "title": "Lunch at Kanda Matsuya",
+            "description": "Enjoy classic, affordable handmade soba noodles.",
+            "type": "food"
+          },
+          {
+            "time": "2:30 PM",
+            "title": "Visit teamLab Planets",
+            "description": "Immerse yourself in digital, interactive art installations.",
+            "type": "activity"
+          },
+          {
+            "time": "6:30 PM",
+            "title": "Dinner at Omoide Yokocho",
+            "description": "Experience atmospheric yakitori stalls under the railway tracks in Shinjuku.",
+            "type": "food"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Traditional Culture and Views",
+        "activities": [
+          {
+            "time": "8:30 AM",
+            "title": "Visit Senso-ji Temple",
+            "description": "Explore Tokyo's oldest temple in Asakusa before the crowds arrive.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "12:00 PM",
+            "title": "Lunch at Nakamise Shopping Street",
+            "description": "Sample local street foods like ningyo-yaki and melonpan.",
+            "type": "food"
+          },
+          {
+            "time": "2:00 PM",
+            "title": "Meiji Shrine and Harajuku",
+            "description": "Walk through tranquil forest paths to the shrine, followed by youth fashion at Takeshita Street.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "7:00 PM",
+            "title": "Shibuya Crossing and Dinner",
+            "description": "Cross the famous intersection and enjoy ramen at Ichiran Shibuya.",
+            "type": "food"
+          }
+        ]
+      }
+    ]
+  },
+  "yihf8bs": {
+    "destination": "Paris",
+    "days": [
+      {
+        "day": 1,
+        "theme": "Historic Heart & Iconic Sights",
+        "activities": [
+          {
+            "time": "09:00 AM",
+            "title": "Eiffel Tower Visit",
+            "description": "Ascend the iconic iron tower early to beat the crowds and enjoy breathtaking views of Paris.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "01:00 PM",
+            "title": "Lunch at Le Relais de l Entrecote",
+            "description": "Savor classic French steak frites with their famous secret sauce in a lively bistro setting.",
+            "type": "food"
+          },
+          {
+            "time": "03:00 PM",
+            "title": "Louvre Museum Highlights",
+            "description": "Explore world-famous masterpieces including the Mona Lisa, Venus de Milo, and Winged Victory.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "07:30 PM",
+            "title": "Seine River Dinner Cruise",
+            "description": "Enjoy a luxurious multi-course dinner while drifting past illuminated monuments along the Seine.",
+            "type": "food"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Artistic Charm & Bohemian Montmartre",
+        "activities": [
+          {
+            "time": "09:30 AM",
+            "title": "Sacre-Coeur Basilica & Montmartre Stroll",
+            "description": "Wander through artistic cobblestone streets, visit the stunning white basilica, and explore Place du Tertre.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Café Lunch at Chez la Mère Catherine",
+            "description": "Relax at a historic Montmartre cafe offering traditional bistro fare.",
+            "type": "food"
+          },
+          {
+            "time": "02:30 PM",
+            "title": "Musée d Orsay",
+            "description": "Discover an incredible collection of Impressionist and Post-Impressionist masterpieces inside a renovated beaux-arts railway station.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "06:00 PM",
+            "title": "Pastry Tasting in Saint-Germain-des-Prés",
+            "description": "Sample exquisite macarons and French pastries from legendary boutiques like Pierre Hermé.",
+            "type": "activity"
+          }
+        ]
+      }
+    ]
+  },
+  "u0l5wzg": {
+    "destination": "Paris",
+    "days": [
+      {
+        "day": 1,
+        "theme": "Historic Highlights & Iconic Views",
+        "activities": [
+          {
+            "time": "09:00 AM",
+            "title": "Eiffel Tower",
+            "description": "Ascend the iconic landmark for sweeping views of Paris.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "12:30 PM",
+            "title": "Lunch at Le Relais de de l'Entrecôte",
+            "description": "Enjoy classic French steak-frites in a lively atmosphere.",
+            "type": "food"
+          },
+          {
+            "time": "02:30 PM",
+            "title": "Louvre Museum",
+            "description": "Explore masterpiece artworks including the Mona Lisa and Venus de Milo.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "07:00 PM",
+            "title": "Seine River Dinner Cruise",
+            "description": "Admire illuminated monuments from the water while enjoying French cuisine.",
+            "type": "activity"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Artistic Charm & Bohemian Montmartre",
+        "activities": [
+          {
+            "time": "09:30 AM",
+            "title": "Sacré-Cœur Basilica",
+            "description": "Visit the stunning white basilica atop the hill of Montmartre.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "11:30 AM",
+            "title": "Stroll Place du Tertre",
+            "description": "Watch street artists paint and grab a fresh pastry from a local bakery.",
+            "type": "activity"
+          },
+          {
+            "time": "01:00 PM",
+            "title": "Lunch at Chez la Mère Catherine",
+            "description": "Dine at one of the oldest bistros in Montmartre.",
+            "type": "food"
+          },
+          {
+            "time": "03:00 PM",
+            "title": "Musée d'Orsay",
+            "description": "View world-famous Impressionist art inside a former grand railway station.",
+            "type": "sightseeing"
+          }
+        ]
+      }
+    ]
+  },
+  "y7y57r2": {
+    "destination": "India (Golden Triangle - Delhi, Agra, Jaipur)",
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival and Historic Old Delhi",
+        "activities": [
+          {
+            "time": "10:00 AM",
+            "title": "Jama Masjid Visit",
+            "description": "Explore one of the largest mosques in India, built by Mughal Emperor Shah Jahan.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "01:00 PM",
+            "title": "Street Food Tour in Chandni Chowk",
+            "description": "Sample classic Delhi street food like parathas and jalebis at historic mid-range eateries.",
+            "type": "food"
+          },
+          {
+            "time": "04:00 PM",
+            "title": "Humayun's Tomb",
+            "description": "Stroll through the serene gardens surrounding this UNESCO World Heritage monument.",
+            "type": "sightseeing"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Mughal Heritage of Agra",
+        "activities": [
+          {
+            "time": "09:00 AM",
+            "title": "Drive to Agra",
+            "description": "Travel comfortably from Delhi to Agra via the Yamuna Expressway.",
+            "type": "activity"
+          },
+          {
+            "time": "02:00 PM",
+            "title": "Agra Fort Exploration",
+            "description": "Discover the expansive red sandstone fortress that served as the main residence of the Mughal emperors.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "07:00 PM",
+            "title": "Mughlai Dinner at Pinch of Spice",
+            "description": "Enjoy traditional North Indian and Mughlai dishes in a popular mid-range restaurant.",
+            "type": "food"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Sunrise Wonder and Journey to Jaipur",
+        "activities": [
+          {
+            "time": "06:00 AM",
+            "title": "Taj Mahal at Sunrise",
+            "description": "Witness the breathtaking view of the Taj Mahal during the quiet morning hours.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "11:00 AM",
+            "title": "Drive to Jaipur via Fatehpur Sikri",
+            "description": "En route to the Pink City, stop to tour the ancient deserted city of Fatehpur Sikri.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "07:30 PM",
+            "title": "Dinner at Handi Restaurant",
+            "description": "Taste famous Rajasthani delicacies like Laal Maas and Dal Baati Churma.",
+            "type": "food"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "theme": "Royal Forts and Palaces of Jaipur",
+        "activities": [
+          {
+            "time": "09:30 AM",
+            "title": "Amber Fort Guided Tour",
+            "description": "Explore the magnificent hilltop fort, its courtyards, and the stunning Sheesh Mahal.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "02:00 PM",
+            "title": "Lunch at 1135 AD",
+            "description": "Dine inside the Amber Fort complex offering royal Rajasthani recipes in an elegant setting.",
+            "type": "food"
+          },
+          {
+            "time": "04:30 PM",
+            "title": "City Palace and Jantar Mantar",
+            "description": "Visit the residence of the Royal Family of Jaipur and the historic astronomical observatory.",
+            "type": "sightseeing"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "theme": "Jaipur Arts and Culinary Delights",
+        "activities": [
+          {
+            "time": "10:00 AM",
+            "title": "Hawa Mahal & Old City Bazaar Stroll",
+            "description": "Photograph the Palace of Winds and take a relaxed walk through local markets for textiles and handicrafts.",
+            "type": "sightseeing"
+          },
+          {
+            "time": "01:00 PM",
+            "title": "Lassi at Lassiwala",
+            "description": "Enjoy fresh, rich creamy lassi served in traditional clay cups on Mirza Ismail Road.",
+            "type": "food"
+          },
+          {
+            "time": "04:00 PM",
+            "title": "Rajasthani Cooking Class",
+            "description": "Participate in a hands-on culinary workshop with a local family to learn traditional cooking techniques.",
+            "type": "activity"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "theme": "Relaxed Departure via Delhi",
+        "activities": [
+          {
+            "time": "10:00 AM",
+            "title": "Crafts Museum & Cafe Lota",
+            "description": "Browse Indian artisanal crafts and enjoy a modern Indian fusion lunch at Cafe Lota in Delhi.",
+            "type": "food"
+          },
+          {
+            "time": "03:00 PM",
+            "title": "Souvenir Shopping at Khan Market",
+            "description": "Unwind and pick up high-quality teas, spices, and souvenirs before heading to the airport.",
+            "type": "activity"
+          }
+        ]
+      }
+    ]
+  }
+}
