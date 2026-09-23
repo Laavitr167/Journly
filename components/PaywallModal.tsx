@@ -7,6 +7,7 @@ type PaywallModalProps = {
   onClose: () => void;
   action: 'save' | 'pdf' | null;
   onConfirm: () => void;
+  isLoading: boolean;
 };
 
 export default function PaywallModal({
@@ -14,9 +15,8 @@ export default function PaywallModal({
   onClose,
   action,
   onConfirm,
+  isLoading,
 }: PaywallModalProps) {
-  const [isProcessing, setIsProcessing] = useState(false);
-
   if (!isOpen) {
     return null;
   }
@@ -26,15 +26,8 @@ export default function PaywallModal({
   // - For 'save': persist the trip to database (currently stored in memory)
   // - For 'pdf': generate and download PDF using generateTripPdf()
 
-  const handleConfirm = async () => {
-    setIsProcessing(true);
-    // In a real app, we would process payment here
-    // For now, we'll simulate a successful payment after a short delay
-    // and then call onConfirm
-    setTimeout(() => {
-      setIsProcessing(false);
-      onConfirm();
-    }, 1000);
+  const handleConfirm = () => {
+    onConfirm();
   };
 
   return (
@@ -55,10 +48,10 @@ export default function PaywallModal({
         <div className="mb-6">
           <button
             onClick={handleConfirm}
-            disabled={isProcessing}
+            disabled={isLoading}
             className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
           >
-            {isProcessing ? 'Processing...' : 'Pay'}
+            {isLoading ? 'Processing...' : 'Pay'}
           </button>
         </div>
         <p className="text-sm text-gray-500 dark:text-gray-400 text-center">

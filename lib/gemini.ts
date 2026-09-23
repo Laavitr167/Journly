@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI, GenerationConfig } from '@google/generative-ai';
+import { GoogleGenerativeAI, GenerationConfig, SchemaType } from '@google/generative-ai';
 import { Itinerary } from '../types/itinerary';
 
 const apiKey = process.env.GEMINI_API_KEY;
@@ -10,39 +10,40 @@ const genAI = new GoogleGenerativeAI(apiKey);
 
 // Define the JSON schema for the itinerary
 const itinerarySchema = {
-  type: 'object',
+  type: SchemaType.OBJECT,
   properties: {
-    destination: { type: 'string' },
+    destination: { type: SchemaType.STRING },
     days: {
-      type: 'array',
+      type: SchemaType.ARRAY,
       items: {
-        type: 'object',
+        type: SchemaType.OBJECT,
         properties: {
-          day: { type: 'integer' },
-          theme: { type: 'string' },
+          day: { type: SchemaType.INTEGER },
+          theme: { type: SchemaType.STRING },
           activities: {
-            type: 'array',
+            type: SchemaType.ARRAY,
             items: {
-              type: 'object',
+              type: SchemaType.OBJECT,
               properties: {
-                time: { type: 'string' },
-                title: { type: 'string' },
-                description: { type: 'string' },
+                time: { type: SchemaType.STRING },
+                title: { type: SchemaType.STRING },
+                description: { type: SchemaType.STRING },
                 type: {
-                  type: 'string',
-                  enum: ['sightseeing', 'food', 'activity'],
+                  type: SchemaType.STRING,
+                  format: "enum",
+                  enum: ['sightseeing', 'food', 'activity'] as string[],
                 },
               },
-              required: ['time', 'title', 'description', 'type'],
+              required: ['time', 'title', 'description', 'type'] as string[],
             },
           },
         },
-        required: ['day', 'theme', 'activities'],
+        required: ['day', 'theme', 'activities'] as string[],
       },
     },
   },
-  required: ['destination', 'days'],
-};
+  required: ['destination', 'days'] as string[],
+} as const;
 
 export async function generateItinerary(input: {
   destination: string;
@@ -91,8 +92,6 @@ days: array of objects with:
     maxOutputTokens: 8192,
     responseMimeType: 'application/json',
     responseSchema: itinerarySchema,
-    // Reduce reasoning overhead for structured output
-    thinkingConfig: { thinkingLevel: 'low' },
   };
 
   let attempts = 0;

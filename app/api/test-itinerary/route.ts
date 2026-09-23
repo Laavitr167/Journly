@@ -8,7 +8,7 @@ export async function GET() {
       budget: 'mid' as const,
       days: 3,
       pace: 'relaxed' as const,
-      interests: ['food', 'culture', 'history'] as const,
+      interests: ['food', 'culture', 'history'],
     };
 
     const itinerary = await generateItinerary(sampleInput);
