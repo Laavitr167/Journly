@@ -7,7 +7,7 @@ export async function generateMetadata() {
     title: 'Journly - AI Trip Planner with Interactive Maps',
     description: 'Create personalized AI-powered trip itineraries with day-by-day plans, interactive maps, and save your favorite journeys. Plan your perfect adventure in minutes.',
     alternates: {
-      canonical: 'http://localhost:3000/',
+      canonical: '/',
     },
   };
 }

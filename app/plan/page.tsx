@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Plan Your Trip - AI Itinerary Generator',
   description: 'Create personalized AI-powered trip itineraries in minutes. Choose your destination, budget, pace, and interests to generate a custom day-by-day plan with interactive maps and activity recommendations.',
   alternates: {
-    canonical: 'http://localhost:3000/plan',
+    canonical: '/plan',
   },
 };
 
