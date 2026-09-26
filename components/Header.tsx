@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-sm">
+    <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-3">
@@ -23,10 +23,10 @@ export default function Header() {
         </div>
         <div className="hidden md:flex items-center space-x-4">
           {/* Desktop navigation links */}
-          <Link href="/" className="text-sm font-medium text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-400">
+          <Link href="/" className="text-sm font-medium text-gray-600 hover:text-indigo-600">
             Home
           </Link>
-          <Link href="/plan" className="text-sm font-medium text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-400">
+          <Link href="/plan" className="text-sm font-medium text-gray-600 hover:text-indigo-600">
             Plan Trip
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Header() {
                 >
                   {user.user_metadata?.full_name?.charAt(0) ?? user.email?.charAt(0) ?? '?'}
                 </div>
-                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                <div className="text-sm font-medium text-gray-900">
                   {user.user_metadata?.full_name ?? user.email?.split('@')[0] ?? 'User'}
                 </div>
               </div>

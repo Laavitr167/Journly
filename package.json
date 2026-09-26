@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.24.1",
     "@supabase/ssr": "^0.12.6",
     "@supabase/supabase-js": "^2.115.0",
+    "framer-motion": "^13.4.4",
     "jspdf": "^4.2.1",
     "leaflet": "^1.9.4",
     "next": "16.3.4",

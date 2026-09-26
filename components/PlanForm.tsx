@@ -52,7 +52,7 @@ export default function PlanForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8 bg-white/80 dark:bg-border/20 rounded-2xl p-8 backdrop-blur-sm border border-border/20">
+    <form onSubmit={handleSubmit} className="space-y-8 bg-white/80 bg-border/20 rounded-2xl p-8 backdrop-blur-sm border border-border/20">
       <div className="space-y-4">
         <label className="block text-lg font-semibold text-text">
           Destination
@@ -62,7 +62,7 @@ export default function PlanForm() {
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
           required
-          className="mt-2 block w-full rounded-xl border border-border/30 bg-background/50 px-6 py-4 text-text placeholder-text-light/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary dark:focus:border-primary/40 transition-all duration-300"
+          className="mt-2 block w-full rounded-xl border border-border/30 bg-background/50 px-6 py-4 text-text placeholder-text-light/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary focus:border-primary/40 transition-all duration-300"
           placeholder="e.g., Paris, France"
         />
       </div>
@@ -78,7 +78,7 @@ export default function PlanForm() {
           min="1"
           max="14"
           required
-          className="mt-2 block w-full rounded-xl border border-border/30 bg-background/50 px-6 py-4 text-text placeholder-text-light/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary dark:focus:border-primary/40 transition-all duration-300"
+          className="mt-2 block w-full rounded-xl border border-border/30 bg-background/50 px-6 py-4 text-text placeholder-text-light/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary focus:border-primary/40 transition-all duration-300"
         />
       </div>
 

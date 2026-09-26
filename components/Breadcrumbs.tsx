@@ -54,13 +54,13 @@ export default function Breadcrumbs() {
   return (
     <>
       {/* Visible breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 px-4 py-2">
+      <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-gray-500 text-gray-400 px-4 py-2">
         {breadcrumbItems.map((item, index) => (
           <>
             {index > 0 && (
               <span className="mx-2">/</span>
             )}
-            <Link href={item.href} className="hover:text-indigo-600 dark:hover:text-indigo-400">
+            <Link href={item.href} className="hover:text-indigo-600 hover:text-indigo-400">
               {item.label}
             </Link>
           </>

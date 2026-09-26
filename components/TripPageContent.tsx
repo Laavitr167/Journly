@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useAuth } from '@/lib/auth';
 import { supabase } from '@/lib/supabase';
+import { motion } from "framer-motion";
 
 const TripMap = dynamic(() => import('@/components/TripMap'), { ssr: false });
 
@@ -134,18 +135,27 @@ export default function TripPageContent({ itinerary }: TripPageContentProps) {
       <div className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
           <div className="flex justify-between items-start mb-6">
-            <h1 className="text-4xl font-bold tracking-tighter text-text drop-shadow-md">
+            <motion.h1
+              className="text-4xl font-bold tracking-tighter text-text drop-shadow-md"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               {itinerary.destination}
-            </h1>
+            </motion.h1>
             <Link href="/plan">
-              <button className="rounded-xl px-4 py-2 font-medium text-text border border-border/30 bg-background/50 hover:bg-primary/10 hover:border-primary/20 transition-all duration-300">
+              <motion.button
+                className="rounded-xl px-4 py-2 font-medium text-text border border-border/30 bg-background/50 hover:bg-primary/10 hover:border-primary/20 transition-all duration-300"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
                 ← Plan Another
-              </button>
+              </motion.button>
             </Link>
           </div>
 
           <div className="space-y-6">
-            {itinerary.days.map((day) => {
+            {itinerary.days.map((day, index) => {
               // Extract activities that have place information
               const places = day.activities
                 .filter(activity => activity.place)
@@ -156,7 +166,13 @@ export default function TripPageContent({ itinerary }: TripPageContentProps) {
                 }));
 
               return (
-                <div key={day.day} className="bg-white/80 dark:bg-border/20 rounded-2xl p-6 backdrop-blur-sm border border-border/20">
+                <motion.div
+                  key={day.day}
+                  className="bg-white/80 bg-border/20 rounded-2xl p-6 backdrop-blur-sm border border-border/20"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.07 }}
+                >
                   <div className="flex justify-between items-start mb-4">
                     <h2 className="text-2xl font-semibold tracking-tighter text-text">
                       Day {day.day}: {day.theme}
@@ -164,8 +180,8 @@ export default function TripPageContent({ itinerary }: TripPageContentProps) {
                   </div>
 
                   <div className="space-y-4">
-                    {day.activities.map((activity, index) => (
-                      <div key={`${activity.title}-${index}`} className="flex space-x-4 py-3 border-t pt-2 first:border-t-0 first:pt-0">
+                    {day.activities.map((activity, actIndex) => (
+                      <div key={`${activity.title}-${actIndex}`} className="flex space-x-4 py-3 border-t pt-2 first:border-t-0 first:pt-0">
                         <div className="flex-shrink-0">
                           {/* Icon based on activity type */}
                           {activity.type === 'sightseeing' && (
@@ -204,28 +220,32 @@ export default function TripPageContent({ itinerary }: TripPageContentProps) {
                       </div>
                     </div>
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </div>
 
           {/* Action buttons */}
           <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4">
-            <button
+            <motion.button
               onClick={() => handleOpenPaywall('save')}
               disabled={isSaving}
               className={`flex-1 rounded-xl px-6 py-4 font-semibold text-white bg-primary hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1 shadow-md border border-primary/50 backdrop-blur-sm ${
                 isSaving ? 'opacity-50' : ''
               }`}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               {isSaving ? 'Saving...' : 'Save this trip'}
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => handleOpenPaywall('pdf')}
               className="ml-4 sm:ml-0 flex-1 rounded-xl px-6 py-4 font-semibold text-white bg-primary hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1 shadow-md border border-primary/50 backdrop-blur-sm"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               Download PDF
-            </button>
+            </motion.button>
           </div>
 
           {/* Save error message */}
