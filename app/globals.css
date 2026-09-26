@@ -1,27 +1,33 @@
-@import "leaflet/dist/leaflet.css";
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #fdf6f0;
+  --color-background-dark: #f5ebe0;
+  --color-text: #3e2723;
+  --color-text-light: #5d4037;
+  --color-primary: #d4a373;
+  --color-primary-dark: #b8865a;
+  --color-primary-light: #e8c9a8;
+  --color-accent: #ef6c00;
+  --color-accent-dark: #e65100;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #3e2723;
+    --color-background-dark: #4e342e;
+    --color-text: #fdf6f0;
+    --color-text-light: #e8c9a8;
+    --color-primary: #b8865a;
+    --color-primary-dark: #a26b43;
+    --color-primary-light: #d4a373;
+    --color-accent: #ffb74d;
+    --color-accent-dark: #ffa726;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-feature-settings: "rlig" 1, "calt" 1; /* Enable ligatures and contextual alternates for better rendering */
 }

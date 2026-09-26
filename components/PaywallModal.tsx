@@ -1,11 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-
 type PaywallModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  action: 'save' | 'pdf' | null;
   onConfirm: () => void;
   isLoading: boolean;
 };
@@ -13,7 +10,6 @@ type PaywallModalProps = {
 export default function PaywallModal({
   isOpen,
   onClose,
-  action,
   onConfirm,
   isLoading,
 }: PaywallModalProps) {
@@ -27,6 +23,10 @@ export default function PaywallModal({
   // - For 'pdf': generate and download PDF using generateTripPdf()
 
   const handleConfirm = () => {
+    // Action determines what happens after payment confirmation:
+    // 'save': persist trip to database
+    // 'pdf': generate and download PDF
+    // For now, we just call onConfirm and let parent handle the action
     onConfirm();
   };
 

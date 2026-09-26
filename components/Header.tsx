@@ -21,12 +21,24 @@ export default function Header() {
             <span className="text-2xl font-bold text-indigo-600">Journly</span>
           </Link>
         </div>
+        <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop navigation links */}
+          <Link href="/" className="text-sm font-medium text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-400">
+            Home
+          </Link>
+          <Link href="/plan" className="text-sm font-medium text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-400">
+            Plan Trip
+          </Link>
+        </div>
         <div className="flex items-center space-x-4">
           {user ? (
             <>
               <div className="flex items-center space-x-2">
                 {/* Avatar placeholder - in a real app, you'd use the user's avatar */}
-                <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center">
+                <div
+                  className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center"
+                  aria-label={`Avatar for ${user.user_metadata?.full_name ?? user.email?.split('@')[0] ?? 'User'}`}
+                >
                   {user.user_metadata?.full_name?.charAt(0) ?? user.email?.charAt(0) ?? '?'}
                 </div>
                 <div className="text-sm font-medium text-gray-900 dark:text-gray-100">
