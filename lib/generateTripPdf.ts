@@ -1,12 +1,12 @@
-import jsPDF from 'jspdf';
 import { Itinerary } from '@/types/itinerary';
 
 /**
  * Generates a PDF itinerary and triggers download
  * @param itinerary The itinerary data to include in the PDF
  */
-export function generateTripPdf(itinerary: Itinerary): void {
-  const doc = new jsPDF();
+export async function generateTripPdf(itinerary: Itinerary): Promise<void> {
+  const jsPDF = await import('jspdf');
+  const doc = new jsPDF.default();
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
   let y = 20;
