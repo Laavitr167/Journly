@@ -2,6 +2,8 @@
 
 **Pick a destination and a budget. Get a full trip plan.**
 
+https://journlyy.netlify.app/
+  
 Journly is an AI-powered travel planner that turns a destination and budget into a complete itinerary: places to visit, food spots, and a day-by-day schedule, all shown on an interactive map. Sign in with Google to save your trips and come back to them later.
 
 ## Features
