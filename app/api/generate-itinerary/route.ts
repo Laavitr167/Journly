@@ -23,13 +23,22 @@ export async function POST(request: Request) {
       );
     }
 
-    const itinerary = await generateItinerary({
-      destination,
-      budget: budget as 'budget' | 'mid' | 'luxury',
-      days: Number(days),
-      pace: pace as 'relaxed' | 'packed',
-      interests: interests as string[],
-    });
+    let itinerary;
+    try {
+      itinerary = await generateItinerary({
+        destination,
+        budget: budget as 'budget' | 'mid' | 'luxury',
+        days: Number(days),
+        pace: pace as 'relaxed' | 'packed',
+        interests: interests as string[],
+      });
+    } catch (geminiError) {
+      console.error('Gemini error:', geminiError);
+      return NextResponse.json(
+        { error: 'Our AI provider is temporarily busy. Please try again in a moment.' },
+        { status: 503 }
+      );
+    }
 
     // Enrich with geographic coordinates from OpenStreetMap
     const enrichedItinerary = await enrichItinerary(itinerary);

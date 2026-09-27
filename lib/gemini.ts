@@ -45,6 +45,11 @@ const itinerarySchema = {
   required: ['destination', 'days'] as string[],
 } as const;
 
+// Helper function to sleep for a given number of milliseconds
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export async function generateItinerary(input: {
   destination: string;
   budget: 'budget' | 'mid' | 'luxury';
@@ -52,6 +57,9 @@ export async function generateItinerary(input: {
   pace: 'relaxed' | 'packed';
   interests: string[];
 }): Promise<Itinerary> {
+  // Simulate Gemini failure for testing
+  // throw new Error('Simulated Gemini failure');
+
   const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
 
   // Build the prompt
@@ -95,7 +103,7 @@ days: array of objects with:
   };
 
   let attempts = 0;
-  const maxAttempts = 2;
+  const maxAttempts = 3;
   let lastError: unknown;
 
   while (attempts < maxAttempts) {
@@ -130,7 +138,8 @@ days: array of objects with:
       if (attempts >= maxAttempts) {
         break;
       }
-      // Optional: wait a bit before retry? Not needed for now.
+      // Wait for 1 second before retrying
+      await sleep(1000);
     }
   }
 

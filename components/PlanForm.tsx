@@ -36,8 +36,15 @@ export default function PlanForm() {
       });
 
       if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || 'Failed to generate itinerary');
+        let errorMessage = 'Failed to generate itinerary';
+        try {
+          const errorData = await res.json();
+          errorMessage = errorData.error || errorMessage;
+        } catch (e) {
+          // If we can't parse JSON, use the generic message
+          console.error('Failed to parse error JSON', e);
+        }
+        throw new Error(errorMessage);
       }
 
       const data = await res.json();
